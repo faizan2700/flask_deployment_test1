@@ -1,1 +1,1 @@
-gunicorn --workers 3 --bind unix:/home/movieapp/app.sock -m 777 wsgi:app
+gunicorn --workers 3 --bind unix:/home/app/app.sock -m 777 wsgi:app
