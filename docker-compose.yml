@@ -1,7 +1,0 @@
-version: '3'
-
-services:
-  flaskapp:
-    build: faizan2700/flask_deployment_test1
-    ports:
-      - "5000:5000"
