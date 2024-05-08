@@ -1,1 +1,0 @@
-gunicorn --workers 3 --bind unix:/home/app/app.sock -m 777 wsgi:app
