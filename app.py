@@ -6,12 +6,13 @@ import os
 
 app = Flask(__name__) 
 
-HOST = 'https://third-party-data-store1.documents.azure.com:443/'
-DATABASE_ID = 'database1'
-CONTAINER_ID = 'example1' 
+HOST = os.getenv('HOST') 
+DATABASE_ID = os.getenv('DATABASE_ID') 
+CONTAINER_ID = os.getenv('CONTAINER_ID') 
+MASTER_KEY = os.getenv('MASTER_KEY')
 
 def run_sample():
-    client = cosmos_client.CosmosClient(HOST, {'masterKey': os.getenv('MASTER_KEY')}, user_agent_overwrite=True)
+    client = cosmos_client.CosmosClient(HOST, {'masterKey': MASTER_KEY}, user_agent_overwrite=True)
     # try:
     #     # setup database for this sample
     #     try:
