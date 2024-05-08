@@ -4,12 +4,12 @@ import azure.cosmos.cosmos_client as cosmos_client
 app = Flask(__name__) 
 
 HOST = 'https://third-party-data-store1.documents.azure.com:443/'
-MASTER_KEY = 'm4MQPRRqNNt32VLnbRedud4zMjeWwjCuQozLLV9rr7GyLsfQDP0D5CVN6oRdlAychwAM1d3UoP8iACDbc6WUrg=='
+string = 'm4MQPRRqNNt32VLnbRedud4zMjeWwjCuQozLLV9rr7GyLsfQDP0D5CVN6oRdlAychwAM1d3UoP8iACDbc6WUrg=='
 DATABASE_ID = 'database1'
 CONTAINER_ID = 'example1'
 
 def run_sample():
-    client = cosmos_client.CosmosClient(HOST, {'masterKey': MASTER_KEY}, user_agent="CosmosDBPythonQuickstart", user_agent_overwrite=True)
+    client = cosmos_client.CosmosClient(HOST, {'masterKey': string}, user_agent="CosmosDBPythonQuickstart", user_agent_overwrite=True)
     # try:
     #     # setup database for this sample
     #     try:
